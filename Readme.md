@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="proffy-landing" src="https://github.com/PF-Henrique/NLW-Proffy-Rocketseat/blob/master/1%20-%20NLW%20%2302%20-%201400x900.jpg" />
+    <img alt="proffy-landing" src="https://github.com/PF-Henrique/NLW-2-Proffy/blob/master/.github/mockup.png" />
 </h1>
 
 <p align="center">
@@ -31,7 +31,7 @@
   <a href="#-tecnologias-and-packages">💻 Tecnologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">🔖 Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-getting-started">🚀 Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-customize-">🎯 Customize</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Contributing">🤝 Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-license">📚 License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     
 </p>
@@ -169,83 +169,32 @@ To run the tests, after the dependencies are installed, run `yarn test`.
 
 `yarn test:coverage` to generate the test coverage report in the files.
 
-#### 6. Open in navigator of your preference 🎲
+## 🤝 Contributing  
 
-<h1 align="center">
-    <img alt="proffy-landing" src="https://github.com/PF-Henrique/NLW-Proffy-Rocketseat/blob/master/thumbnail.png" />
-</h1>
+There are many forms to contribute with the project, first of all you can give this github repo a Star.
 
-## 🎯 Customize
-
-You have the freedom to change everything in your project, from the settings of Webpack, Jest and even create new structures.
-
-Example of a private route:
-
-<details>
-  <summary>Route.tsx</summary>
+If you want do help with the code follow the steps bellow
 
 ```ts
-import React from 'react';
-import {
-  Route as ReactDOMRoute,
-  RouteProps as ReactDOMRouteProps,
-  Redirect,
-} from 'react-router-dom';
+# Fork using GitHub official command line
+# If you don't have the GitHub CLI, use the web site to do that.
+$ gh repo fork PF-Henrique/NLW-2-Proffy
 
-import { useAuth } from '../hooks/auth';
+# Clone your fork
+$ git clone {your-fork-url}
+$ cd proffy
 
-interface RouteProps extends ReactDOMRouteProps {
-  isPrivate?: boolean;
-  component: React.ComponentType;
-}
+# Create a branch with your feature
+$ git checkout -b {branch-name}
 
-const Route: React.FC<RouteProps> = ({
-  isPrivate = false,
-  component: Component,
-  ...rest
-}) => {
-  const { user } = useAuth();
-  // You can store user data in another way and only retrieve it here
+# Make the commit with your changes
+$ git commit -m 'Feat: {feature-name}'
 
-  return (
-    <ReactDOMRoute
-      {...rest}
-      render={({ location }) => {
-        return isPrivate === !!user ? (
-          <Component />
-        ) : (
-          <Redirect
-            to={{
-              pathname: isPrivate ? '/' : '/dashboard',
-              state: { from: location },
-            }}
-          />
-        );
-      }}
-    />
-  );
-};
-
-export default Route;
+# Send the code to your remote branch
+$ git push origin {branch-name}
 ```
 
-</details>
-
-To create new paths with `@folder` you must change tsconfig.json and jest.config.js by adding the following lines:
-
-In tsconfig.json add lines inside the `paths` as in the example:
-
-```json
-"@styles/*": ["styles/*"],
-"@newfolder/*": ["newfolder/*"]
-```
-
-In jest.config.js add lines inside the `moduleNameMapper` as in the example:
-
-```js
-'^@styles/(.*)$': '<rootDir>/src/styles/$1',
-'^@newfolder/(.*)$': '<rootDir>/src/newfolder/$1'
-```
+Then send a Pull Request that will be analyzed and approved if it helps with the project
 
 ---
 ## 🐛 Issues
