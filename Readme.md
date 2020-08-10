@@ -137,6 +137,20 @@ $ yarn start
 ```
 Access API at http://localhost:3333/
 
+>The above command will install all third party dependencies used. If you want to install manually all the dependencies follow the steps bellow
+
+```ps
+# Entering in server directory
+$ cd server
+
+# Installing depencies
+$ yarn add @types/cors -D
+$ yarn add @types/express -D
+$ yarn add ts-node-dev -D
+$ yarn add knex
+$ yarn add sqlite3
+```
+
 ### 💻 Run Web Project
 
 ```bash
@@ -150,6 +164,25 @@ $ yarn install
 $ yarn start
 ```
 Go to http://localhost:3000/ to see the result.
+
+
+>The above command will install all third party dependencies used. If you want to install manually all the dependencies follow the steps bellow
+
+```ps
+# Entering in web directory
+$ cd web
+
+# Installing depencies
+$ yarn add @types/react-router-dom -D
+$ yarn add axios
+```
+
+To start the server you need the database, to make migrations use the command:
+
+```
+$ yarn knex:migrate
+```
+>The above command is a custom command made on `package.json` file. (Ln 8, Col 5)
 
 ### 📱 Run Mobile Project
 
@@ -168,6 +201,22 @@ $ yarn install
 $ yarn start
 ```
 Aferter read the QRCode with the app of [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) or run on emulator.
+
+>The above command will install all third party dependencies and fonts used. If you want to install manually all dependencies and fonts used. follow the steps bellow
+
+```ps
+# Installing fonts used
+$ expo install expo-font @expo-google-fonts/archivo
+$ expo install expo-font @expo-google-fonts/poppins
+
+# Installing dependecies required
+$ yarn add @react-navigation/native
+$ expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+$ yarn add @react-navigation/stack
+$ yarn add @react-navigation/bottom-tabs
+$ yarn add axios
+$ expo install @react-native-community/async-storage
+```
 
 #### 5. `yarn start` or `npm run start` 🎲
 
