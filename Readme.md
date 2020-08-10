@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="proffy-landing" src="https://github.com/PF-Henrique/NLW-2-Proffy/blob/master/.github/mockup.png" />
+    <img alt="proffy-landing" src="https://github.com/PF-Henrique/NLW-2-Proffy/blob/master/.github/amostra.png" />
 </h1>
 
 <p align="center">
