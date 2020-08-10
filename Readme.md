@@ -82,10 +82,10 @@ In the dev dependencies the Webpack, Jest, Fast Refresh, Eslint and Prettier are
 
 ## 🔖 Layout
 
-To access the layout use [Web](https://www.figma.com/file/W7X5HgkYaruZnUVKHj6Uz4/Proffy-Web) or [Mobile](https://www.figma.com/file/FSQdUUY3n8YZeLkpZTJYBT/Proffy-Mobile).
+To access the layout use 💻 [Web](https://www.figma.com/file/W7X5HgkYaruZnUVKHj6Uz4/Proffy-Web) or 📱 [Mobile](https://www.figma.com/file/FSQdUUY3n8YZeLkpZTJYBT/Proffy-Mobile).
 
 ## 🚀 Getting started!
-
+ 
 First of all you need to have `node` and `yarn`(or `npm`) installed on your machine.
 
 _If you decide to use npm don't forget to delete yarn.lock in folders_
